@@ -16,72 +16,85 @@
         </div>
         <ol>
             <a href="#"><li>About</li></a>
-            <a href="#"><li>World currency</li></a>
+            <a href="#"><li>World currency map</li></a>
             <a href="#"><li>Home page</li></a>
         </ol>
     </nav>
+
+    <!-- <mobile nav> -->
+
+    <nav class="main-nav-mobile">
+        <div class="logo">
+            <img src="img/logo_mini.png" alt="Brief Exchange">
+        </div>
+        <div class="open-menu-button">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+    </nav>
+
+     <!-- </mobile nav> -->
+
     <div class="control-panel">
         <div class="convert-from-section">
             <div class="wrapper">
                 <h2>Convert <b>from</b></h2>
                 <form>
-                    <input type="text" class="value-input">
+                    <input type="text" class="value-input" pattern="\d*">
                     <input type="text" class="currency-id-input">
                     <div class="open-list-button">
                         <i class="fa fa-angle-down" aria-hidden="true"></i>
                     </div>
-                    <div class="currency-list"></div>
+                    <div class="currency-list">
+                        <ol>
+                            
+                        </ol>
+                    </div>
                 </form>
             </div>
         </div>
     </div>
 
-    <div class="sort-panel">
-        <span>Sort by</span>
-        <span class="mix-tiles-handler">
-            <button class="sort-by-button" data-sort="name:asc">Country name <i class="fa fa-angle-down" aria-hidden="true"></i></button>
-            <button class="sort-by-button" data-sort="name:desc">Country name <i class="fa fa-angle-up" aria-hidden="true"></i></button>
-            <button class="sort-by-button" data-sort="order:asc">popularity <i class="fa fa-angle-down" aria-hidden="true"></i></button>
-            <button class="sort-by-button" data-sort="order:desc">popularity <i class="fa fa-angle-up" aria-hidden="true"></i></button>
-        </span>
-    </div>
+    
 
     <div class="wrapper">
+        <div class="base-currency-preview">
+            <div class="base-value">
+                <span class="base-currency-amount">44</span>
+                <span class="base-currency-id">PLN</span>
+            </div>
+            <div class="base-currency-country">Currency of Poland</div>
+        </div>
+        <div class="sort-panel">
+            <span class="mix-tiles-handler">
+                <div class="wrapper">
+                    <div class="sort-property">Country name</div>
+                    <button class="sort-by-button button-down" data-sort="name:asc">
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </button>
+                    <button class="sort-by-button button-up active-button" data-sort="name:desc">
+                        <i class="fa fa-angle-up" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="wrapper">
+                    <div class="sort-property">Popularity</div>
+                    <button class="sort-by-button button-down" data-sort="order:asc">
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </button>
+                    <button class="sort-by-button button-up" data-sort="order:desc">
+                        <i class="fa fa-angle-up" aria-hidden="true"></i>   
+                    </button>
+                </div>
+                
+            </span>
+        </div>
         <section class="currency-tiles mix-tiles-handler">
-            <!-- js tiles generating -->
+            <!-- tiles here -->
         </section>
-        <aside class="base-currency-info">
-            <div class="base-cur-name">Polish Zloty <span>PLN</span></div>
-            <div class="base-cur-country">The currency of <b>Poland<b></div>
-            
-            <div class="brief-info-bar">
-                <div class="brief-info-value">1zl = 100gr</div>
-                <div class="brief-info-icon">
-                    <i class="fa fa-info-circle"></i>
-                </div>
-            </div>
-
-            <div class="brief-info-bar">
-                <div class="brief-info-value">1zl = 0.27$</div>
-                <div class="brief-info-icon">
-                    <i class="fa fa-usd"></i>
-                </div>
-            </div>
-
-            <div class="brief-info-bar">
-                <div class="brief-info-value">Narodowy Bank Polski</div>
-                <div class="brief-info-icon">
-                    <i class="fa fa-home"></i>
-                </div>
-            </div>
-
-            <button>More info</button>
-        </aside>
+        
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/mixitup.min.js"></script>
-    <script src="js/angular.min.js"></script>
     <script src="js/currencies.js"></script>
     <script src="js/main.js"></script>
 </body>

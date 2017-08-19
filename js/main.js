@@ -13,7 +13,7 @@ $(function() {
         $('.currency-tile').each(function() {
             var id = $(this).attr('id');
             $(this).children('.cur-exchange-value').text(
-                (rates[id]*value).toFixed(4)
+                (rates[id]*value).toFixed(2)
             );
             $(this).children('.cur-course').text(
                 rates[id].toFixed(4)
@@ -33,6 +33,10 @@ $(function() {
             '<div class="cur-exchange-value">0.0000</div>'+
             '<div class="cur-course"><i class="fa fa-angle-up"'+'aria-hidden="true"></i> 0.0000</div>'+
         '</div>'
+       )
+
+       $('.currency-list > ol').append(
+        '<li>'+tile.id+'</li>'
        )
     });
 

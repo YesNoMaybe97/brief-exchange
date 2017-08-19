@@ -100,7 +100,7 @@ var currencyTilesData = [
     },
     {
         currencyName:'Russian Ruble',
-        country:'Russian Federation',
+        country:'Russia',
         id:'RUB',
         rating:17
     },  
