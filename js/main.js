@@ -72,7 +72,7 @@ $(function() {
 
         $('#currency-id').text(localStorage.currency);
 
-        $.getJSON("http://api.fixer.io/latest?base="+currency,
+        $.getJSON("https://api.fixer.io/latest?base="+currency,
         function(data) {
             var rates = data.rates;
             var date = data.date;
