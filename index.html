@@ -12,69 +12,65 @@
 <body>
     <nav class="main-nav">
         <div class="logo">
-            <img src="img/logo_mini.png" alt="Brief Exchange">
+            <a href=""><img src="img/logo_mini.png" alt="Brief Exchange"></a>
         </div>
         <ol>
-            <a href="#"><li>About</li></a>
-            <a href="#"><li>World currency map</li></a>
-            <a href="#"><li>Home page</li></a>
+            <a href="#"><li class="open-about-modal">About</li></a>
+            <a href="https://github.com/adamjaks"><li>Author's page</li></a>
         </ol>
     </nav>
-
-    <!-- <mobile nav> -->
-
+    <!-- <mobile nav> //default hidden -->
     <nav class="main-nav-mobile">
         <div class="logo">
-            <img src="img/logo_mini.png" alt="Brief Exchange">
+            <a href=""><img src="img/logo_mini.png" alt="Brief Exchange"></a>
         </div>
         <div class="open-menu-button">
             <i class="fa fa-bars" aria-hidden="true"></i>
         </div>
+        <ol>
+            <a href="#"><li class="open-about-modal">About</li></a>
+            <a href="https://github.com/adamjaks"><li>Author's page</li></a>
+        </ol>
     </nav>
-
      <!-- </mobile nav> -->
-
-    <div class="control-panel">
-        <div class="convert-from-section">
-            <div class="wrapper">
-                <h2>Convert <b>from</b></h2>
-                <form>
-                    <input type="text" class="value-input" pattern="\d*">
-                    <input type="text" class="currency-id-input">
-                    <div class="open-list-button">
-                        <i class="fa fa-angle-down" aria-hidden="true"></i>
-                    </div>
-                    <div class="currency-list">
-                        <ol>
-                            
-                        </ol>
-                    </div>
-                </form>
+    <div class="wrapper">
+        <div class="user-info">
+            <p>
+                <i class="fa fa-info-circle"></i>
+                Choose value and type of currency that you want to convert by the form below. Last update: <span id="update-date"></span> at 4PM CET.
+            </p>
+        </div>
+        <div class="control-panel">
+            <div class="convert-from-section">
+                <div class="wrapper">
+                    <form id="convert-form">
+                        <input type="text" class="value-input" pattern="\d*" title="Digits only (0-9)" value="100">
+                        <div class="open-list-button">
+                            <span id="currency-id">PLN</span> <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </div>
+                        <button class="convert-button">
+                            <i class="fa fa-check"></i>
+                        </button>
+                        <div class="currency-list">
+                            <ol><!-- js - li generating --></ol>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="base-currency-preview">
+                <div class="base-value">
+                    <form id="preview-form">
+                        <input type="text" class="base-currency-amount" value="100" maxlength="9">
+                    </form>
+                    <span class="base-currency-id">PLN</span>
+                </div>
             </div>
         </div>
-    </div>
-
-    
-
-    <div class="wrapper">
-        <div class="base-currency-preview">
-            <div class="base-value">
-                <span class="base-currency-amount">44</span>
-                <span class="base-currency-id">PLN</span>
-            </div>
-            <div class="base-currency-country">Currency of Poland</div>
+        <div class="base-currency-country">Currency of 
+            <span>Poland</span>
         </div>
         <div class="sort-panel">
             <span class="mix-tiles-handler">
-                <div class="wrapper">
-                    <div class="sort-property">Country name</div>
-                    <button class="sort-by-button button-down" data-sort="name:asc">
-                        <i class="fa fa-angle-down" aria-hidden="true"></i>
-                    </button>
-                    <button class="sort-by-button button-up active-button" data-sort="name:desc">
-                        <i class="fa fa-angle-up" aria-hidden="true"></i>
-                    </button>
-                </div>
                 <div class="wrapper">
                     <div class="sort-property">Popularity</div>
                     <button class="sort-by-button button-down" data-sort="order:asc">
@@ -84,15 +80,46 @@
                         <i class="fa fa-angle-up" aria-hidden="true"></i>   
                     </button>
                 </div>
-                
+                <div class="wrapper">
+                    <div class="sort-property">Country name</div>
+                    <button class="sort-by-button button-down" data-sort="name:asc">
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </button>
+                    <button class="sort-by-button button-up active-button" data-sort="name:desc">
+                        <i class="fa fa-angle-up" aria-hidden="true"></i>
+                    </button>
+                </div>
             </span>
         </div>
         <section class="currency-tiles mix-tiles-handler">
-            <!-- tiles here -->
+            <!-- js - tiles here -->
         </section>
-        
     </div>
-
+    <footer>
+        brief exchange &copy; 2017
+    </footer>
+    <!-- <additionals> -->
+    <div class="scroll-to-top">
+        <i class="fa fa-angle-up"></i>
+    </div>
+    <div class="about-modal">
+        <div class="modal-title">About</div>
+        <p>
+            Brief Exchange is a simple and transparent application to check exchange rates of currencies around the world. Just choose your base currency and convert its value to 30 most popular others.
+            <br><br>
+            The site uses <span class="link">fixer.io</span> api. Currency rates are updated every day around 4PM.
+        </p>
+        <button class="close-modal">
+            <i class="fa fa-close"></i> close
+        </button>
+    </div>
+    <div class="overlay"></div>
+    <div class="overlay-darken"></div>
+    <div class="cookies-info">
+        <span>This site uses cookies blah blah blah...</span>
+        <button class="close-cookies-info"><i class="fa fa-close"></i> who cares</button>
+    </div>
+    <!-- </additionals> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/mixitup.min.js"></script>
     <script src="js/currencies.js"></script>

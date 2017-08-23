@@ -1,4 +1,4 @@
-var currencyTilesData = [
+var currencyData = [
     {
         currencyName:'US Dollar',
         country:'USA',
@@ -168,9 +168,9 @@ var currencyTilesData = [
         rating:27
     },  
     {
-        currencyName:'Philippine Peso',
-        country:'Philippines',
-        id:'PHP',
+        currencyName:'Polish Zloty',
+        country:'Poland',
+        id:'PLN',
         rating:28
     },
     {
@@ -180,7 +180,7 @@ var currencyTilesData = [
         rating:29
     },  
     {
-        currencyName:'Cratian Kuna',
+        currencyName:'Croatian Kuna',
         country:'Croatia',
         id:'HRK',
         rating:30
