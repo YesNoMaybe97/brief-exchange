@@ -262,6 +262,10 @@ form {
   color: #888;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
   font-size: 1.8em; }
+  .sort-panel .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
   .sort-panel button {
     background: #a7a7a7;
     border: none;
@@ -365,12 +369,12 @@ body > .wrapper {
     font-size: 1.4em; }
 
 footer {
-  background: #BED7DE;
-  color: #34495E;
-  border-top: 1px solid #c9c9c9;
+  background: #718085;
+  color: #fff;
+  border-top: 1px solid #34495E;
   text-align: center;
   font-size: 1.2em;
-  padding: 20px; }
+  padding: 22px; }
 
 .list-opened .fa {
   transform: rotate(180deg); }
@@ -479,7 +483,6 @@ footer {
 
 @media (max-width: 1024px) {
   .currency-tiles {
-    margin-bottom: 0;
     clear: both;
     width: 100%; }
 
@@ -488,15 +491,15 @@ footer {
 
   .sort-panel .wrapper {
     width: 50%;
-    display: flex; }
+    display: flex;
+    padding-right: 24px; }
     .sort-panel .wrapper:nth-child(2) {
       margin-left: 0; }
 
   .sort-property {
     margin-right: 12px;
     display: flex;
-    align-items: center;
-    padding-left: 14px; }
+    align-items: center; }
 
   .convert-from-section {
     width: 100%;
@@ -532,7 +535,8 @@ footer {
 
   .sort-panel .wrapper {
     width: 100%;
-    margin-left: 0; }
+    margin-left: 0;
+    padding-right: 0; }
 
   .value-input {
     width: 100%; }

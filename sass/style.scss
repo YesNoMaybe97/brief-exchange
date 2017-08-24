@@ -351,6 +351,12 @@ form {
     color:#888;
     @include shadow(1,1,2,4);
 
+    .wrapper {
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+    }
+
     font: {
         size:1.8em;
     }
@@ -489,14 +495,14 @@ body > .wrapper {
 }
 
 footer {
-    background:#BED7DE;
-    color:$mainColor;
-    border-top:1px solid #c9c9c9;
+    background:#718085;
+    color:#fff;
+    border-top:1px solid $mainColor;
     text-align:center;
     font: {
         size:1.2em;
     }
-    padding:20px; 
+    padding:22px; 
 }
 
 //additionals
@@ -636,7 +642,6 @@ footer {
 
 @media (max-width:1024px) {
     .currency-tiles {
-        margin-bottom:0;
         clear: both;
         width:100%;
     }
@@ -648,6 +653,7 @@ footer {
     .sort-panel .wrapper {
         width:50%;
         display:flex;
+        padding-right:24px;
 
         &:nth-child(2) {
             margin-left:0;
@@ -658,7 +664,6 @@ footer {
         margin-right:12px;
         display:flex;
         align-items:center;
-        padding-left:14px;
     }
 
     .convert-from-section {
@@ -708,6 +713,7 @@ footer {
     .sort-panel .wrapper {
         width:100%;
         margin-left:0;
+        padding-right:0;
     }
 
     .value-input {
@@ -735,5 +741,3 @@ footer {
         height:30px;
     }
 }
-
-
