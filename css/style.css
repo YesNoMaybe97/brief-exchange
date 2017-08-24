@@ -536,7 +536,8 @@ footer {
   .sort-panel .wrapper {
     width: 100%;
     margin-left: 0;
-    padding-right: 0; }
+    padding-right: 0;
+    font-size: .7em; }
 
   .value-input {
     width: 100%; }
