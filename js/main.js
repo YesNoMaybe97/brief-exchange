@@ -12,7 +12,7 @@ $(function() {
         main.convert($(this));
         return false;
     });
-    //if local storage doesn't exists - set default values (100 PLN)
+    //if local storage doesn't exists - set default values (100 USD)
     main.setDefault();
     // *** additionals ***
         //open-close "about" modal
@@ -78,7 +78,7 @@ var main = {
     },
     setDefault : function() {
         if (!localStorage.value) localStorage.value = 100;
-        if (!localStorage.currency) localStorage.currency = 'PLN';
+        if (!localStorage.currency) localStorage.currency = 'USD';
         this.convert();
     },
     resizeInput : function() {
